@@ -15,6 +15,8 @@ public class PlayerMovimiento : MonoBehaviour
     private bool jump;
     private bool movement = true;
 
+    private GameObject BarraVida;
+
     public Transform checkSuelo;
     public LayerMask capaSuelo;
 
@@ -35,6 +37,8 @@ public class PlayerMovimiento : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         escalaPrin = transform.localScale;
+
+        BarraVida = GameObject.Find("BarraVida");
     }
 
     private void Update()
@@ -113,6 +117,7 @@ public class PlayerMovimiento : MonoBehaviour
 
     public void EnemyKnockBack(float enemyPosX)
     {
+        BarraVida.SendMessage("TakeDamage", 15);
         jump = true;
 
         float side = Mathf.Sign(enemyPosX - transform.position.x);

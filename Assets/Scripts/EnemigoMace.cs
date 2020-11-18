@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class EnemigoMace : MonoBehaviour
 {
-   private void OnCollisionEnter2D(Collision2D collision)
+   void OnTriggerEnter2D(Collider2D col)
     {
-        if (collision.transform.CompareTag("Player"))
+        if (col.gameObject.tag=="Player")
         {
-            Debug.Log("Player");
-            Destroy(collision.gameObject);
+            Destroy(gameObject);
+            
         }
        
     }

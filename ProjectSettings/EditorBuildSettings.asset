@@ -11,4 +11,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/LAB8.unity
     guid: 1aaab1d36abacee4cbd6b706674dd698
+  - enabled: 1
+    path: Assets/LAB8_2.unity
+    guid: 39ad7a2e091c1424cb29178a5820a461
+  - enabled: 1
+    path: Assets/Avance2/Avance2/Assets/Scenes/Info1.unity
+    guid: 836f21cad2f13ff4787424d097ec0bb7
+  - enabled: 1
+    path: Assets/Avance2/Avance2/Assets/Scenes/Info2.unity
+    guid: d53eadd9a529f544ab3e16b5bbbaa621
   m_configObjects: {}

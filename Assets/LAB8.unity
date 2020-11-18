@@ -1815,14 +1815,14 @@ RectTransform:
   m_GameObject: {fileID: 412589693}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.17396612, y: 0.1865429, z: 1}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_Children: []
   m_Father: {fileID: 846790239}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -39.8, y: 1.7}
+  m_AnchoredPosition: {x: -187.4, y: 9.8}
   m_SizeDelta: {x: 46.031677, y: 17.814041}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &412589695
@@ -1902,7 +1902,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 164.5, y: -4.3}
+  m_AnchoredPosition: {x: 773, y: -450}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &414526597
@@ -6236,6 +6236,7 @@ GameObject:
   - component: {fileID: 1473863711}
   - component: {fileID: 1473863713}
   - component: {fileID: 1473863714}
+  - component: {fileID: 1473863715}
   m_Layer: 0
   m_Name: hueso
   m_TagString: Untagged
@@ -6319,6 +6320,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3502d2f9360d320479f42bfe86d4e826, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  SceneName: Info1
 --- !u!58 &1473863714
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -6335,6 +6337,19 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.2
+--- !u!114 &1473863715
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1473863710}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b1920b2907b126468dbaba705abe580, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SceneName: LAB8_2
 --- !u!1 &1481364660
 GameObject:
   m_ObjectHideFlags: 0
@@ -9264,7 +9279,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2126368155}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -14.32, y: 9.05, z: 0}
+  m_LocalPosition: {x: -15.68, y: 9.05, z: 0}
   m_LocalScale: {x: 0.31327432, y: 0.22952773, z: 1}
   m_Children: []
   m_Father: {fileID: 0}

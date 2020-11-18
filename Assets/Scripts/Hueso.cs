@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Hueso : MonoBehaviour
 {
@@ -20,5 +21,15 @@ public class Hueso : MonoBehaviour
 
 		GameManager.ActualizarMonedas();                            //Actualizamos las monedas
 		gameObject.SetActive(false);                                //Destruimos el objeto
+
+		ChangeToScene();
+	}
+
+	public string SceneName;
+
+	public void ChangeToScene()
+	{
+
+		SceneManager.LoadScene(SceneName);
 	}
 }

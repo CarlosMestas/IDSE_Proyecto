@@ -8,18 +8,12 @@ Este proyecto se esta desarrollando la creación de un videojuego educativo, est
 
 **Estudiantes:**
 
-- asdas
+- Cjuno Merma, Benanny Roger
 
-- asd
+- Fernandez Ninahuaman, Maria Alejandra
 
-- asd
+- Huamani Huancara, Cleofe 
 
-- asd
-
-
+- Mestas Escarcena, Carlos Alberto
 
 ## Comenzando 🚀
-
-_Estas instrucciones te permitirán obtener una copia del proyecto en funcionamiento en tu máquina local para propósitos de desarrollo y pruebas._
-
-Mira **Deployment** para conocer como desplegar el proyecto.

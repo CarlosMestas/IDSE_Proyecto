@@ -19,7 +19,7 @@ public class Hueso : MonoBehaviour
 		if (collision.gameObject.layer != playerLayer)              //Si la capa del objeto que colisiona no es PlayerLayer, salimos
 		return;
 
-		GameManager.ActualizarMonedas();                            //Actualizamos las monedas
+		//GameManager.ActualizarMonedas();                            //Actualizamos las monedas
 		gameObject.SetActive(false);                                //Destruimos el objeto
 
 		ChangeToScene();

@@ -21,6 +21,9 @@ public class Player : MonoBehaviour
     bool correr;
     bool dobleSalto;
 
+    bool isDead;
+
+
     int contador;
 
     Rigidbody2D rb;
@@ -65,6 +68,7 @@ public class Player : MonoBehaviour
             {
                 rb.AddForce(Vector2.up * fuerzaSalto);
                 anim.SetTrigger("Saltar");
+
             }
             else if (dobleSalto)
             {

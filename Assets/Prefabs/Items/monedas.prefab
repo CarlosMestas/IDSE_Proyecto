@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 6497834440392736661}
   - component: {fileID: 6497834440392736665}
   - component: {fileID: 6497834440392736664}
+  - component: {fileID: 216821108}
   m_Layer: 0
   m_Name: monedas
   m_TagString: Untagged
@@ -27,7 +28,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6497834440392736660}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -3.6279798, y: 2.0730875, z: 1.4913559}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -129,5 +130,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 011aa5a718120c74abf44b5caf0cb044, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &216821108
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6497834440392736660}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: efaf247eb3362a34c9a6fd7aef6606aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

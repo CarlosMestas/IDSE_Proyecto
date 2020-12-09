@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Hueso : MonoBehaviour
 {
@@ -18,7 +19,17 @@ public class Hueso : MonoBehaviour
 		if (collision.gameObject.layer != playerLayer)              //Si la capa del objeto que colisiona no es PlayerLayer, salimos
 		return;
 
-		GameManager.ActualizarMonedas();                            //Actualizamos las monedas
+		//GameManager.ActualizarMonedas();                            //Actualizamos las monedas
 		gameObject.SetActive(false);                                //Destruimos el objeto
+
+		ChangeToScene();
+	}
+
+	public string SceneName;
+
+	public void ChangeToScene()
+	{
+
+		SceneManager.LoadScene(SceneName);
 	}
 }

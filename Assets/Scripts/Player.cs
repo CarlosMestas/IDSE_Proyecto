@@ -11,7 +11,7 @@ public class Player : MonoBehaviour
     private bool jump;
     private bool movement = true;
 
-
+   
 
     public Transform checkSuelo;
     public LayerMask capaSuelo;
@@ -113,6 +113,11 @@ public class Player : MonoBehaviour
         enSuelo = Physics2D.OverlapCircle(checkSuelo.position, 0.1f, capaSuelo);
     }
 
+ 
 
+    void EnableMovement()
+    {
+        movement = true;
+    }
 
 }

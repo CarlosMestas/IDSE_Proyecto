@@ -34,6 +34,7 @@ public class PlayerMovimiento2 : MonoBehaviour{
         anim = GetComponent<Animator>();
         escalaPrin = transform.localScale;
 
+        BarraVida = GameObject.Find("BarraVida");
     }
 
     private void Update()

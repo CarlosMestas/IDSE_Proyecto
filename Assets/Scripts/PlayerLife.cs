@@ -12,7 +12,7 @@ public class PlayerLife : MonoBehaviour
 
     void Start()
     {
-        
+        life = 100;
         lifebar = GameObject.FindGameObjectWithTag("lifebar").GetComponent<Slider>();
         
     }

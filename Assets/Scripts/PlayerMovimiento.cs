@@ -15,7 +15,6 @@ public class PlayerMovimiento : MonoBehaviour
     private bool jump;
     private bool movement = true;
 
-    private GameObject BarraVida;
 
     public Transform checkSuelo;
     public LayerMask capaSuelo;
@@ -114,16 +113,7 @@ public class PlayerMovimiento : MonoBehaviour
         enSuelo = Physics2D.OverlapCircle(checkSuelo.position, 0.1f, capaSuelo);
     }
 
-    public void EnemyKnockBack(float enemyPosX)
-    {
-        BarraVida.SendMessage("TakeDamage", 15);
-        jump = true;
-
-        float side = Mathf.Sign(enemyPosX - transform.position.x);
-        rb.AddForce(Vector2.left * side * fuerzaSalto, ForceMode2D.Impulse);
-        movement = false;
-        Invoke("EnableMovement", 0.7f);
-    }
+   
 
     void EnableMovement()
     {

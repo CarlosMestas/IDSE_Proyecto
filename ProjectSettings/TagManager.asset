@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - lifebar
+  - Enemigo
   layers:
   - Default
   - TransparentFX
@@ -15,7 +16,7 @@ TagManager:
   - 
   - 
   - Player
-  - Enemis
+  - Enemigos
   - 
   - 
   - 
@@ -44,4 +45,10 @@ TagManager:
     locked: 0
   - name: InterFace
     uniqueID: 2077173129
+    locked: 0
+  - name: Enemigos
+    uniqueID: 3644145097
+    locked: 0
+  - name: Player
+    uniqueID: 4189720467
     locked: 0

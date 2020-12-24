@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
+
 
 public class Player : MonoBehaviour
 {
@@ -15,6 +17,10 @@ public class Player : MonoBehaviour
 
     public Transform checkSuelo;
     public LayerMask capaSuelo;
+
+
+    public TextMeshProUGUI VidaText;
+    public int Vida = 100;
 
 
     bool enSuelo;
@@ -35,6 +41,10 @@ public class Player : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         escalaPrin = transform.localScale;
+
+        VidaText.text = "" + Vida + "%";
+
+
 
     }
 
@@ -106,11 +116,24 @@ public class Player : MonoBehaviour
         {
             dobleSalto = true;
         }
+
+        VidaText.text = "" + Vida + "%";
+        if (Vida <= 0)
+        {
+            Destroy(gameObject);
+        }
+
     }
 
     private void FixedUpdate()
     {
         enSuelo = Physics2D.OverlapCircle(checkSuelo.position, 0.1f, capaSuelo);
+
+        VidaText.text = "" + Vida + "%";
+        if (Vida <= 0)
+        {
+            Destroy(gameObject);
+        }
     }
 
  
@@ -120,4 +143,12 @@ public class Player : MonoBehaviour
         movement = true;
     }
 
+    private void OnCollisionEnter2D (Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Enemigo")
+        {
+            Vida -= 15;
+            Destroy(collision.gameObject);
+        }
+    }
 }

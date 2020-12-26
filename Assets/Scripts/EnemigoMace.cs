@@ -5,6 +5,7 @@ using UnityEngine;
 public class EnemigoMace : MonoBehaviour
 {
 
+
     public float maxSpeed = 1f;
     public float speed = 1f;
 
@@ -38,7 +39,5 @@ public class EnemigoMace : MonoBehaviour
 
         }
     }
-
-
 
 }

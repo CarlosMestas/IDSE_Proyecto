@@ -1141,6 +1141,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 7760743567026217454, guid: e73e1c29b5439384a9776b6fff202328,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e73e1c29b5439384a9776b6fff202328, type: 3}
 --- !u!1001 &290860458
@@ -4313,6 +4318,38 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1062582169 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3025290767133564265, guid: fa8d67bb7553ec040a660cac54645b9d,
+    type: 3}
+  m_PrefabInstance: {fileID: 3025290766968580025}
+  m_PrefabAsset: {fileID: 0}
+--- !u!61 &1062582172
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1062582169}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 2.56, y: 2.56}
+    newSize: {x: 2.56, y: 2.56}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 2.56, y: 2.56}
+  m_EdgeRadius: 0
 --- !u!4 &1066364437 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6497834440392736667, guid: 03bd2ac9121437d4dacfb7d09168479a,
@@ -9240,5 +9277,21 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 9
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 3025290767133564266, guid: fa8d67bb7553ec040a660cac54645b9d,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3025290767133564266, guid: fa8d67bb7553ec040a660cac54645b9d,
+        type: 3}
+      propertyPath: m_EdgeRadius
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3025290767133564266, guid: fa8d67bb7553ec040a660cac54645b9d,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 3025290767133564266, guid: fa8d67bb7553ec040a660cac54645b9d, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: fa8d67bb7553ec040a660cac54645b9d, type: 3}

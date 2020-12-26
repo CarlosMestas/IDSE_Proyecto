@@ -16,7 +16,6 @@ public class Player : MonoBehaviour
     public Transform checkSuelo;
     public LayerMask capaSuelo;
 
-
     bool enSuelo;
     bool correr;
     bool dobleSalto;

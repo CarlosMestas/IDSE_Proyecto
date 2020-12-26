@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
+
 
 public class Player : MonoBehaviour
 {
@@ -11,11 +13,19 @@ public class Player : MonoBehaviour
     private bool jump;
     private bool movement = true;
 
-    private GameObject BarraVida;
+   
 
     public Transform checkSuelo;
     public LayerMask capaSuelo;
 
+<<<<<<< HEAD
+=======
+
+    public TextMeshProUGUI VidaText;
+    public int Vida = 100;
+
+
+>>>>>>> 3ed3e069248e3e81ea5e32f18209e86b797838b8
     bool enSuelo;
     bool correr;
     bool dobleSalto;
@@ -35,7 +45,10 @@ public class Player : MonoBehaviour
         anim = GetComponent<Animator>();
         escalaPrin = transform.localScale;
 
-        BarraVida = GameObject.Find("BarraVida");
+        VidaText.text = "" + Vida + "%";
+
+
+
     }
 
     private void Update()
@@ -106,27 +119,39 @@ public class Player : MonoBehaviour
         {
             dobleSalto = true;
         }
+
+        VidaText.text = "" + Vida + "%";
+        if (Vida <= 0)
+        {
+            Destroy(gameObject);
+        }
+
     }
 
     private void FixedUpdate()
     {
         enSuelo = Physics2D.OverlapCircle(checkSuelo.position, 0.1f, capaSuelo);
+
+        VidaText.text = "" + Vida + "%";
+        if (Vida <= 0)
+        {
+            Destroy(gameObject);
+        }
     }
 
-    public void EnemyKnockBack(float enemyPosX)
-    {
-        BarraVida.SendMessage("TakeDamage", 15);
-        jump = true;
-
-        float side = Mathf.Sign(enemyPosX - transform.position.x);
-        rb.AddForce(Vector2.left * side * fuerzaSalto, ForceMode2D.Impulse);
-        movement = false;
-        Invoke("EnableMovement", 0.7f);
-    }
+ 
 
     void EnableMovement()
     {
         movement = true;
     }
 
+    private void OnCollisionEnter2D (Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Enemigo")
+        {
+            Vida -= 15;
+            Destroy(collision.gameObject);
+        }
+    }
 }

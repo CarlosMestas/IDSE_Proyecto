@@ -5,10 +5,6 @@ using UnityEngine;
 public class EnemigoMace : MonoBehaviour
 {
 
-    /// public float demage;
-    //public float demageTime;
-    //private float counter;
-    //private bool hasHit;
     public float maxSpeed = 1f;
     public float speed = 1f;
 
@@ -42,16 +38,6 @@ public class EnemigoMace : MonoBehaviour
 
         }
     }
-
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.gameObject.tag == "Player")
-        {
-      
-            Destroy(collision.gameObject);
-        }
-    }
-
 
 
 

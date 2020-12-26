@@ -27,14 +27,21 @@ public class Player : MonoBehaviour
     bool correr;
     bool dobleSalto;
 
-    bool isDead;
-
 
     int contador;
+
+    [Header("Variables de la muerte")]
+    public int muerteX;                                                     //Fuerza hacia atrás en caso de ser heridos
+    public int muerteY;                                                     //Fuerza hacia arriba en caso de ser heridos
+    public bool invencible = false;											//Boleano que nos va a decir si somos invencibles o no
+
 
     Rigidbody2D rb;
     Animator anim;
     Vector3 escalaPrin;
+
+    SpriteRenderer spr;														//Referencia al SpriteRenderer
+
 
     private void Start()
     {
@@ -129,11 +136,6 @@ public class Player : MonoBehaviour
     {
         enSuelo = Physics2D.OverlapCircle(checkSuelo.position, 0.1f, capaSuelo);
 
-        VidaText.text = "" + Vida + "%";
-        if (Vida <= 0)
-        {
-            Destroy(gameObject);
-        }
     }
 
  
@@ -148,7 +150,34 @@ public class Player : MonoBehaviour
         if (collision.gameObject.tag == "Enemigo")
         {
             Vida -= 15;
-            Destroy(collision.gameObject);
+            //Destroy(collision.gameObject);
+        }
+        
+    }
+
+    void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.name == "Collider" && invencible == false)
+        {
+            ChocamosEnemigo(collision);
         }
     }
+
+    void ChocamosEnemigo(Collider2D collision)
+    {
+
+        if (transform.position.x > collision.gameObject.transform.position.x)       //Dependiendo de a que lado esté el enemigo
+        {
+            Vida -= 15;
+            rb.velocity = new Vector2(0f, 0f);
+            rb.AddForce(new Vector2(muerteX, muerteY));                             //Minisalto a la derecha
+        }
+        else
+        {
+            Vida -= 15;
+            rb.velocity = Vector2.zero;
+            rb.AddForce(new Vector2(-muerteX, muerteY));                            //Minisalto a la izda
+        }
+    }
+            
 }
